@@ -7,9 +7,9 @@
 
     <body>
         <header class="menu-principal">
-            <main>
+            <main class="content">
                 <div class="header-1">
-                    <div class="logo">
+                    <div class="logo">      
                         <img src="../1_IMG/logo.png" alt="">
                     </div>
                     <div class="redes-sociais">
@@ -34,7 +34,7 @@
                 </div>
             </main>
         </header>  
-        <main class="tel-100 menu-url"> 
+        <div class="tel-100 menu-url"> 
             <div class="header-2">
                 <div class="menu">
                     <ul>
@@ -72,20 +72,24 @@
                     and to list all of types of beers.
                     </p>
                 <div class="col-3 bloco-texto">
-                    <img src="../1_IMG/icons_main_principal/table.png" alt="Table Icon">
+                    <img onclick="carregar(true)" src="../1_IMG/icons_main_principal/table.png" alt="Table Icon">
                     <h3><b>List </b>of Beers</h3>
                     <p>You can list all of beers here, checked it right now!!!</p>
                 </div>
                 <div class="col-3 bloco-texto">
-                    <img src="../1_IMG/icons_main_principal/edit.png" alt="Table Icon">
+                    <img onclick="carregar(false)" src="../1_IMG/icons_main_principal/edit.png" alt="Table Icon">
                     <h3><b>New </b>Beers</h3>
                     <p>You can register new beer, edit or deleted some beer here.</p>
                 </div>
             </div>
         </div>
-        <div class="col-100 bloco-imagens-texto">
+        <div class="bloco-imagens-texto">
             
-            
+            <main id="listagem">
+                <img class="Imchopp" src="../1_IMG/icons_main_principal/cerveja_copo.png" alt=""> 
+                <img class="Logo_main" src="../1_IMG/logo.png" alt=""> 
+
+            </main>
         </div>
         <div class="tel-100">
             <div class="content">
@@ -104,12 +108,53 @@
             </div>
         </div>
         <div class="tel-100">
-
         </div>
+        <script>
+            let request = new XMLHttpRequest();
+            function carregar(b)
+            {
+                    if (b==true)
+                    {
+                        request.open('GET','tabela.html');
+                        request.onload = function () 
+                        {
+                            let conteudoResponse = this.responseText;
+                            let elemento = document.getElementById('listagem');
+                            elemento.innerHTML = conteudoResponse;
+                            carregarLista();
+                        }
+                        request.send();
+                    }
+                    else 
+                    {
+                        request.open('GET','cad_cerveja.html');
+                        request.onload = function () 
+                        {
+                            let conteudoResponse = this.responseText;
+                            let elemento = document.getElementById('listagem');
+                            elemento.innerHTML = conteudoResponse;
+                            carregarLista();
+                        }
+                        request.send();
+                    }
+            }
+            function carregarChop()
+            {
+                request.open('GET','fundo_padrao.html');
+                        request.onload = function () 
+                        {
+                            let conteudoResponse = this.responseText;
+                            let elemento = document.getElementById('listagem');
+                            elemento.innerHTML = conteudoResponse;
+                        }
+                        request.send();
+            }
+        </script>
         <script type="text/javascript" src="../4_JS/jquery1.js"></script>
         <script type="text/javascript" src="../4_JS/jquery-migrate.js"></script>
         <script type="text/javascript" src="../4_JS/slick_min.js"></script>
         <script type="text/javascript" src="../4_JS/main.js"></script>
+        <script src="../4_JS/crud.js"></script>
     </body>
     <footer>
         <div class="rodape">

@@ -2,10 +2,10 @@
 <main>
     <div class="cabecalho-crud">
         <h1>Produtos</h1>
-        <a class="botao-principal" href="cadastro_produto.html">Voltar</a>
+        <a onclick="carregarChop()" class="botao-principal">Voltar</a>
     </div>
     <hr />
-    <table>
+    <table id="cervejas">
         <thead>
             <tr>
                 <th>Id</th>
@@ -15,25 +15,20 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td class="id">1</td>
-                <td>Amstel</td>
-                <td class="tipo">Duplo Malte</td>
-                <td class="opcoes">
-                    <a class="editar" href="">Editar</a> 
-                    <a class="excluir" href="">Excluir</a> 
-                </td>
-            </tr>
-            <tr>
-                <td class="id">2</td>
-                <td>Bhama</td>
-                <td class="tipo">Pilsen</td>
-                <td class="opcoes">
-                    <a class="editar" href="">Editar</a> 
-                    <a class="excluir" href="">Excluir</a> 
-                </td>
-            </tr>
-
+            
         </tbody>
     </table>
+    <script>
+        function carregarChop()
+            {
+                request.open('GET','fundo_padrao.html');
+                        request.onload = function () 
+                        {
+                            let conteudoResponse = this.responseText;
+                            let elemento = document.getElementById('listagem');
+                            elemento.innerHTML = conteudoResponse;
+                        }
+                        request.send();
+            }
+        </script>
 </main>

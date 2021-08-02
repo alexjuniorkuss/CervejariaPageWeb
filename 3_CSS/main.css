@@ -19,7 +19,13 @@ background-color: black;
 height: 90px;
 border-bottom: 3px solid #e8861f;
 }
-main, .content {
+main {
+    margin: 0 auto;
+    width: 1080px;
+    height: 80px;
+    position: relative;
+}
+.content {
     margin: 0 auto;
     border-top: 3px solid #e8861f;
     width: 1080px;
@@ -58,14 +64,13 @@ main, .content {
     color: #8b8b8b;
     margin-left: 15px;
     height: 55px;
+    border-bottom: 3px solid rgb(221, 221, 221);
 }
 .menu ul li:hover{
     border-bottom: 3px solid #e8861f; 
 }
 .menu ul li a:hover{
  color: #e8861f;
- font-size: 30px;
- transition: 0.2s;
 }
 .menu ul li a{
     color: #8b8b8b;
@@ -142,7 +147,7 @@ button.slick-next{
     width: 50%;
     position: absolute;
     left: 50%;
-    top: 555px;
+    top: 500px;
 }
 .slick-dots li{
     padding-left: 4px;
@@ -156,7 +161,7 @@ li.slick-active button {
 }
 .texto-destaque
 {
-    margin-top: 100px;
+    margin-top: 3%;
     text-align: center;
 }
 .texto-destaque h1
@@ -186,16 +191,14 @@ li.slick-active button {
 {
     margin-top: 3em;
 }
-.bloco-imagens-texto {
-    background-color: #eeeeee;
-}
 .bloco-imagens-texto{
+    background-color: #eeeeee;
     margin-top: 40px;
     width: 100%;
     display: inline-block;
     content: '';
     height: 700px;
-    background: #eeeeee;
+    background: #eeeeee; 
 } 
 .bloco-imagens-texto:before{
     width: 100%;
@@ -205,7 +208,7 @@ li.slick-active button {
     background: white;
     background-image: url(../1_IMG/icons_main_principal/icon_cima.png);
     background-repeat: no-repeat;
-    background-position: 31%;
+    background-position: 28%;
 } 
 .col_marcas
 {
@@ -232,8 +235,17 @@ div.col_marcas.bloco-texto.stela
 }
 .rodape-texto
 {
-    margin-top: 2.5 %;
+    margin-top: 2.5%;
     text-align: center;
     color:white;
 }
+.Imchopp
+{
+    margin: 10% 40% 0 ;
+}
+.Logo_main
+{
+    margin: 0 42% 0 ;
+}
+
 
