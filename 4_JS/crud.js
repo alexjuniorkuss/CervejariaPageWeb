@@ -8,14 +8,13 @@ function Salvar()
     if (cervejas.findIndex(cer => cer.id == id) != -1)
     {
         alert("Editado com sucesso!");
-        cervejas[cervejas.findIndex(cer => cer.id == id) = cerv];
+        cervejas[cervejas.findIndex(cer => cer.id == id)] = cerv;  
         Listar();
     }else
     {
         confirm("Salvo com sucesso!");
         cervejas.push(cerv);
-        localStorage.setItem("cervejas",JSON.stringify(cervejas));
-        Listar();
+        localStorage.setItem("cervejas",JSON.stringify(cervejas)); 
     };
 }
 function Listar()
@@ -48,9 +47,19 @@ function editar(id)
 {
     let item = cervejas.findIndex(x => x.id == id);
     let nom = cervejas[item];
-    document.getElementById("id").value = nom.id;
-    document.getElementById("nome").value = nom.cerv;
-    document.getElementById("tipo").value = nom.tipo;
+    console.log(nom);
+    request.open('GET','crud_cerveja.html');
+    request.onload = function () 
+    {
+        let conteudoResponse = this.responseText;
+        let elemento = document.getElementById('listagem');
+        elemento.innerHTML = conteudoResponse;
+        console.log(nom)
+        document.getElementById("id").value = nom.id;
+        document.getElementById("nome").value = nom.nome;
+        document.getElementById("tipo").value = nom.tipo;
+    }
+    request.send();
 }
 
 window.onload = function()
@@ -60,5 +69,5 @@ window.onload = function()
     {
         cervejas = JSON.parse(cervejasJson);
     }
-    Listar();
+    
 }

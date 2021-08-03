@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="../3_CSS/cad_cerveja.css">
+<main>
+    <div class="cabecalho-crud">
+        <h1>Cervejas</h1>
+        <a onclick="carregarChop()" class="botao-principal">Voltar</a>
+    </div>
+    <hr />
+   <div>
+        <div class="form-item">
+            <label for="id">Id</label><input type="number" name="id" id="id">
+        </div>
+        <div class="form-item">
+            <label for="nome">Cerveja</label><input type="text" name="nome" id="nome">
+        </div>
+        <div class="form-item">
+            <label for="tipo">Tipo</label><input type="text" name="tipo" id="tipo">
+        </div>
+        <hr />
+        <input onclick="Salvar()" class="botao-principal salvar"  type="submit" value="Salvar">
+   </div>
+</main>
+<script src="js/crud.js"></script>

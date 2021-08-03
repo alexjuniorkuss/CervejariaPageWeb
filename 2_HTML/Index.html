@@ -121,19 +121,18 @@
                             let conteudoResponse = this.responseText;
                             let elemento = document.getElementById('listagem');
                             elemento.innerHTML = conteudoResponse;
-                            carregarLista();
+                            Listar();
                         }
                         request.send();
                     }
                     else 
                     {
-                        request.open('GET','cad_cerveja.html');
+                        request.open('GET','crud_cerveja.html');
                         request.onload = function () 
                         {
                             let conteudoResponse = this.responseText;
                             let elemento = document.getElementById('listagem');
                             elemento.innerHTML = conteudoResponse;
-                            carregarLista();
                         }
                         request.send();
                     }
