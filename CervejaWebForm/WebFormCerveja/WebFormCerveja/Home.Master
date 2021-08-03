@@ -1,0 +1,135 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="WebFormCerveja.Home" %>
+
+<!DOCTYPE html>
+
+<html>
+    <head runat="server">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link href="Content/css/Home.css" rel="stylesheet" />
+        <link href="Content/css/Slick.css" type="text/css" rel="stylesheet" />
+        <title>Cervejaria</title>
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+<body>
+    <header class="menu-principal">
+            <main class="content">
+                <div class="header-1">
+                    <div class="logo">      
+                        <img src="Content/Img/logo.png" />
+                    </div>
+                    <div class="redes-sociais">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="Content/Img/RedesSociais/face.png" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="Content/Img/RedesSociais/insta.png" alt="">
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="Content/Img/RedesSociais/linkdin.png" alt="">
+                                    </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </header>  
+     <div class="tel-100 menu-url"> 
+            <div class="header-2">
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="">Home</a>
+                        </li>
+                        <li>
+                            <a href="">New</a>
+                        </li>
+                        <li>
+                            <a href="">List</a>
+                        </li>
+                        <li>
+                            <a href="">about</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="busca">
+                   <input placeholder="Search here" type="text" name="" id="">
+                </div>
+            </div>
+         <div>
+            <div class="slider-principal">
+                    <img src="Content/Img/banner/cervejas.jpg" />
+                    <img src="Content/Img/banner/heineken.jpg" alt="">
+                    <img src="Content/Img/banner/becks.jpg" alt="">
+                    <img src="Content/Img/banner/bud.jpg" alt="">
+              </div>
+        </div>
+        <div class="tel-100">
+            <div class="content texto-destaque">
+                <h1>THE <strong>LARGEST BREWERY</strong> IN BRAZIL.</h1>
+                    <p>Here you can register new types of beers. To consult a lot about the issue, 
+                    and to list all of types of beers.
+                    </p>
+                <div class="col-3 bloco-texto">
+                    <a href="Tabela.aspx">
+                    <img onclick="carregar(true)" src="Content/Img/icons_main_principal/table.png" alt="Table Icon">
+                    </a>
+                    <h3><b>List </b>of Beers</h3>
+                    <p>You can list all of beers here, checked it right now!!!</p>
+                </div>
+                <div class="col-3 bloco-texto">
+                    <a href="Cru_cerveja.aspx">
+                    <img onclick="carregar(false)" src="Content/Img/icons_main_principal/edit.png" alt="Table Icon">
+                    </a>
+                    <h3><b>New </b>Beers</h3>
+                    <p>You can register new beer, edit or deleted some beer here.</p>
+                </div>
+            </div>
+        </div>
+         <div class="bloco-imagens-texto">
+            
+            <main id="listagem">
+                <div>
+                    <form id="form1" runat="server">
+                        <div>
+                            <asp:ContentPlaceHolder ID="body" runat="server">
+
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+            <div class="tel-100">
+                <div class="content">
+                    <div class="col_marcas bloco-texto">
+                        <img src="Content/Img/rodape_logos/heineken.png" alt="Table Icon">
+                    </div>
+                    <div class="col_marcas bloco-texto">
+                        <img src="Content/Img/rodape_logos/becks.png" alt="Table Icon">
+                    </div>
+                    <div class="col_marcas bloco-texto">
+                        <img src="Content/Img/rodape_logos/bud.png" alt="Table Icon">
+                    </div>
+                    <div  class="col_marcas bloco-texto stela">
+                        <img src="Content/Img/rodape_logos/stela.png" alt="Table Icon">
+                    </div>
+                </div>
+            </div>
+         <footer>
+                <script type="text/javascript" src="Scripts/jquery1.js"></script>
+                <script type="text/javascript" src="Scripts/jquery-migrate.js"></script>
+                <script type="text/javascript" src="Scripts/slick_min.js"></script>
+                <script type="text/javascript" src="Scripts/main.js"></script>
+            <div class="rodape">
+                <h4 class="rodape-texto">Todos os direitos reservados <br /> &copy; Alex Jnr.</h4>
+            </div>
+         </footer>
+</body>
+</html>
